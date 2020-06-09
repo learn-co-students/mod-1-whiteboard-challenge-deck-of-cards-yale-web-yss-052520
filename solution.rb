@@ -8,7 +8,7 @@ class Deck
         @cards = []
         $RANKS.each do |rank|
             $SUITS.each do |suit|
-                card = Card.new(rank, suit)
+                card = Card.new(suit, rank)
                 @cards << card
             end
         end
@@ -23,10 +23,9 @@ end
 class Card
     attr_reader :rank, :suit
 
-    def initialize(rank, suit)
-        puts "rank = #{rank}, suit = #{suit}"
-        @rank = suit
-        @suit = rank
+    def initialize(suit, rank)
+        @rank = rank
+        @suit = suit
     end
 
 end
