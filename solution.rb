@@ -1,5 +1,3 @@
-require 'pry'
-
 class Deck
     attr_reader :cards
 
@@ -26,12 +24,8 @@ end
 class Card
     attr_reader :suit, :rank
 
-    @@all = []
-
     def initialize(suit, rank)
         @suit = suit
         @rank = rank
-        
-        @@all << self
     end
 end
